@@ -9,6 +9,7 @@ $(".saveBtn").click(function(){
     console.log(this) // "this" represents .saveBtn
 
     // ".siblings()" is  a selector that gets the children of each element in the set of matched elements. source: https://api.jquery.com/siblings/
+
     var text = $(this).siblings(".description").val();
 
     // ".parent()" is a selector that gets the parent of each element in the current set of matched elements. source: https://api.jquery.com/parent/#parent-selector
@@ -16,10 +17,22 @@ $(".saveBtn").click(function(){
     var time = $(this).parent().attr("id");
 
     // Set Items to Local Storage
+
     localStorage.setItem(time, text);
 
 })
 
+// Load saved data from Local Storage for each hour created
+
+$("#hour9 .description").val(localStorage.getItem("hour9"));
+$("#hour9 .description").val(localStorage.getItem("hour10"));
+$("#hour9 .description").val(localStorage.getItem("hour11"));
+$("#hour9 .description").val(localStorage.getItem("hour12"));
+$("#hour9 .description").val(localStorage.getItem("hour13"));
+$("#hour9 .description").val(localStorage.getItem("hour14"));
+$("#hour9 .description").val(localStorage.getItem("hour15"));
+$("#hour9 .description").val(localStorage.getItem("hour16"));
+$("#hour9 .description").val(localStorage.getItem("hour17"));
 
 
 
