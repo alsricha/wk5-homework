@@ -18,7 +18,7 @@ $(".saveBtn").click(function(event){
 
     // Set Items to Local Storage
 
-    localStorage.setItem(time, tex);
+    localStorage.setItem(time, text);
 
 })
 
